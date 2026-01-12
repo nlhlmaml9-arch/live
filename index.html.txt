@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>البث المباشر</title>
+<style>
+body {
+  background:#111;
+  color:white;
+  text-align:center;
+  font-family:Arial;
+}
+button {
+  padding:10px 20px;
+  margin:5px;
+  font-size:16px;
+}
+iframe {
+  width:90%;
+  height:500px;
+  border:none;
+}
+</style>
+</head>
+<body>
+
+<h2>📺 البث المباشر</h2>
+
+<button onclick="play('https://shls-masr-enc.edgenextcdn.net/out/v1/d5036cabf11e45bf9d0db410ca135c18/index_49.m3u8')">قناة 1</button>
+<button onclick="play('https://www.youtube.com/embed/ID2')">https://shls-masr-enc.edgenextcdn.net/out/v1/d5036cabf11e45bf9d0db410ca135c18/index_49.m3u8</button>
+
+<div id="player"></div>
+
+<script>
+function play(url){
+ document.getElementById("player").innerHTML =
+ `<iframe src="${url}" allowfullscreen></iframe>`;
+}
+</script>
+
+</body>
+</html>
